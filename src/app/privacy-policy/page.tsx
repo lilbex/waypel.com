@@ -5,14 +5,20 @@ export default function PrivacyPolicy() {
       <p className="mb-6"><strong>Last updated:</strong> {new Date().toLocaleDateString()}</p>
       
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Camera Permission</h2>
-        <p className="mb-4">WayPel requests camera permission to enable the following features:</p>
+        <h2 className="text-2xl font-semibold mb-4">Camera and Media Permissions</h2>
+        <p className="mb-4">WayPel requests the following permissions:</p>
         <ul className="list-disc pl-6 mb-4">
-          <li>Taking photos within the app</li>
-          <li>Video calling functionality</li>
-          <li>Profile picture updates</li>
+          <li><strong>Camera (android.permission.CAMERA):</strong> To capture photos and videos for profile pictures and content creation</li>
+          <li><strong>Media Library Access:</strong> To select and upload existing photos/videos</li>
+          <li><strong>Storage Access:</strong> To save and manage media files</li>
         </ul>
-        <p>We do not access your camera without your explicit permission, and camera data is only used for the intended app functionality.</p>
+        <p className="mb-4">Camera and media data is:</p>
+        <ul className="list-disc pl-6 mb-4">
+          <li>Only accessed with your explicit permission</li>
+          <li>Used solely for app functionality (profile pictures, content sharing)</li>
+          <li>Not shared with third parties without consent</li>
+          <li>Stored securely on our servers</li>
+        </ul>
       </section>
       
       <section className="mb-8">

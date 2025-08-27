@@ -31,7 +31,7 @@ export default function DeleteAccount() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       alert('Your account has been permanently deleted.');
       window.location.href = '/';
-    } catch (error) {
+    } catch {
       alert('Failed to delete account. Please try again.');
     } finally {
       setIsDeleting(false);
@@ -91,7 +91,7 @@ export default function DeleteAccount() {
             </div>
 
             <div className="form-group">
-              <label className="form-label">Type "DELETE" to confirm:</label>
+              <label className="form-label">Type &quot;DELETE&quot; to confirm:</label>
               <input
                 type="text"
                 value={confirmText}

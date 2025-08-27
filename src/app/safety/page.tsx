@@ -23,7 +23,7 @@ export default function SafetyStandards() {
               <li>No harassment, bullying, or threatening behavior</li>
               <li>No sharing of inappropriate or explicit content</li>
               <li>No spam or misleading information</li>
-              <li>Respect other users' privacy and boundaries</li>
+              <li>Respect other users&apos; privacy and boundaries</li>
               <li>No impersonation or fake profiles</li>
             </ul>
           </section>

@@ -1,52 +1,103 @@
+import Link from 'next/link';
+
 export default function PrivacyPolicy() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12">
-      <h1 className="text-3xl font-bold mb-8">Privacy Policy for WayPel</h1>
-      <p className="mb-6"><strong>Last updated:</strong> {new Date().toLocaleDateString()}</p>
-      
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Camera and Media Permissions</h2>
-        <p className="mb-4">WayPel requests the following permissions:</p>
-        <ul className="list-disc pl-6 mb-4">
-          <li><strong>Camera (android.permission.CAMERA):</strong> To capture photos and videos for profile pictures and content creation</li>
-          <li><strong>Read Media Images (android.permission.READ_MEDIA_IMAGES):</strong> To access and select photos from your device gallery for profile pictures and content sharing</li>
-          <li><strong>Read Media Video (android.permission.READ_MEDIA_VIDEO):</strong> To access and select videos from your device gallery for uploading and sharing</li>
-          <li><strong>Storage Access:</strong> To save and manage media files</li>
-        </ul>
-        <p className="mb-4">Camera and media data is:</p>
-        <ul className="list-disc pl-6 mb-4">
-          <li>Only accessed with your explicit permission</li>
-          <li>Used solely for app functionality (profile pictures, content sharing)</li>
-          <li>Not shared with third parties without consent</li>
-          <li>Stored securely on our servers</li>
-        </ul>
-      </section>
-      
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Data Collection</h2>
-        <p>We collect only the data necessary to provide our services. Any photos or videos taken through the app are processed according to your privacy settings.</p>
-      </section>
-      
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Safety Standards</h2>
-        <p className="mb-4">WayPel is committed to providing a safe environment for all users:</p>
-        <ul className="list-disc pl-6 mb-4">
-          <li>We prohibit harassment, bullying, and inappropriate content</li>
-          <li>Users can report and block other users</li>
-          <li>We moderate content and remove violations</li>
-          <li>Personal information is protected and not shared without consent</li>
-          <li>We verify user accounts to prevent fake profiles</li>
-        </ul>
-        <p className="mb-4">To report safety concerns or violations, contact us immediately at: safety@waypel.com</p>
-      </section>
-      
-      <section>
-        <h2 className="text-2xl font-semibent mb-4">Contact Information</h2>
-        <p className="mb-2"><strong>Support:</strong> support@waypel.com</p>
-        <p className="mb-2"><strong>Safety Reports:</strong> safety@waypel.com</p>
-        <p className="mb-2"><strong>Business Inquiries:</strong> business@waypel.com</p>
-        <p>If you have questions about this privacy policy or our safety standards, contact us using the information above.</p>
-      </section>
+    <div className="privacy-page">
+      <div className="container">
+        <Link href="/" className="back-link">
+          ← Back to Home
+        </Link>
+
+        <div className="privacy-content">
+          <div className="page-header">
+            <h1 className="page-title">Privacy Policy</h1>
+            <p className="page-date">Last updated: December 2024</p>
+          </div>
+
+          <section className="policy-section">
+            <h2 className="section-heading">1. Information We Collect</h2>
+            <p className="section-text">
+              We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.
+            </p>
+            <h3 className="subsection-heading">Personal Information:</h3>
+            <ul className="policy-list">
+              <li>Email address and username</li>
+              <li>Profile information (avatar, bio, preferences)</li>
+              <li>Chat messages and content you create</li>
+              <li>Quiz responses and game data</li>
+            </ul>
+            <h3 className="subsection-heading">Automatically Collected Information:</h3>
+            <ul className="policy-list">
+              <li>Device information and identifiers</li>
+              <li>Usage data and app interactions</li>
+              <li>Location data (if permitted)</li>
+              <li>Performance and crash data</li>
+            </ul>
+          </section>
+
+          <section className="policy-section">
+            <h2 className="section-heading">2. How We Use Your Information</h2>
+            <p className="section-text">We use the information we collect to:</p>
+            <ul className="policy-list">
+              <li>Provide and improve our services</li>
+              <li>Enable communication between users</li>
+              <li>Personalize your experience</li>
+              <li>Process transactions and rewards</li>
+              <li>Send notifications and updates</li>
+              <li>Ensure safety and prevent abuse</li>
+              <li>Comply with legal obligations</li>
+            </ul>
+          </section>
+
+          <section className="policy-section">
+            <h2 className="section-heading">3. Information Sharing</h2>
+            <p className="section-text">
+              We do not sell your personal information. We may share your information in the following circumstances:
+            </p>
+            <ul className="policy-list">
+              <li>With other users as part of the social features</li>
+              <li>With service providers who help us operate the app</li>
+              <li>When required by law or to protect our rights</li>
+              <li>In connection with a business transfer or merger</li>
+              <li>With your explicit consent</li>
+            </ul>
+          </section>
+
+          <section className="policy-section">
+            <h2 className="section-heading">4. Data Security</h2>
+            <p className="section-text">
+              We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+            </p>
+            <p className="section-text">
+              However, no method of transmission over the internet or electronic storage is 100% secure, so we cannot guarantee absolute security.
+            </p>
+          </section>
+
+          <section className="policy-section">
+            <h2 className="section-heading">5. Your Rights and Choices</h2>
+            <p className="section-text">You have the right to:</p>
+            <ul className="policy-list">
+              <li>Access and update your personal information</li>
+              <li>Delete your account and associated data</li>
+              <li>Control privacy settings and notifications</li>
+              <li>Opt out of marketing communications</li>
+              <li>Request a copy of your data</li>
+              <li>Report privacy concerns to us</li>
+            </ul>
+          </section>
+
+          <section className="policy-section">
+            <h2 className="section-heading">6. Contact Us</h2>
+            <p className="section-text">
+              If you have any questions about this Privacy Policy, please contact us at:
+            </p>
+            <div className="contact-info">
+              <p>Email: privacy@waypel.com</p>
+              <p>Address: Waypel Privacy Team</p>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
   );
 }

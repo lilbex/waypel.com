@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Waypel Website
+
+A comprehensive, responsive, and production-ready website for the Waypel mobile app - where users play, learn, and earn.
+
+## Features
+
+- **Fully Responsive**: Mobile-first design that works perfectly on all devices
+- **SEO Optimized**: Comprehensive meta tags, structured data, and search engine optimization
+- **Performance Focused**: Fast loading times with optimized assets and code splitting
+- **PWA Ready**: Progressive Web App capabilities with offline support
+- **Accessibility**: WCAG compliant with proper semantic HTML and ARIA labels
+- **Modern Stack**: Built with Next.js 15, React 19, TypeScript, and Tailwind CSS
+
+## Pages
+
+- **Homepage**: Hero section, features overview, statistics, and call-to-action
+- **About**: Company story, mission, team information
+- **Features**: Detailed feature descriptions and benefits
+- **Help**: Comprehensive FAQ and support information
+- **Privacy Policy**: Complete privacy policy and data handling information
+- **Terms of Service**: Legal terms and conditions
+- **Safety**: Community guidelines and safety measures
+
+## Key Sections
+
+### Homepage
+- Hero section with app download links
+- Feature highlights with icons and descriptions
+- User statistics and social proof
+- How it works step-by-step guide
+- Call-to-action sections
+
+### Features Covered
+- **Chat & Connect**: Instant messaging and social features
+- **Groups**: Community building and interest-based groups
+- **Live Streaming**: Real-time broadcasting capabilities
+- **Solo Quizzes**: Individual learning and knowledge testing
+- **Quiz Challenges**: Competitive multiplayer gaming
+- **Coin System**: Reward mechanism and earning opportunities
+
+## Technical Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript for type safety
+- **Styling**: Tailwind CSS for responsive design
+- **Icons**: Lucide React for consistent iconography
+- **Animations**: Framer Motion for smooth interactions
+- **Performance**: Optimized images, lazy loading, and code splitting
 
 ## Getting Started
 
-First, run the development server:
-
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build for Production
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## SEO Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Comprehensive meta tags and Open Graph data
+- Structured data markup
+- XML sitemap generation
+- Robots.txt configuration
+- Performance optimization for Core Web Vitals
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## PWA Features
 
-## Deploy on Vercel
+- Web app manifest
+- Service worker for offline functionality
+- App-like experience on mobile devices
+- Install prompts for supported browsers
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Brand Identity
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The website maintains Waypel's brand identity:
+- **Colors**: Indigo primary (#6366f1), Pink accent (#ec4899)
+- **Typography**: Inter font family for modern readability
+- **Style**: Fun, social, and engaging design language
+- **Tone**: Friendly, encouraging, and community-focused
+
+## Deployment
+
+The website is optimized for deployment on:
+- Vercel (recommended for Next.js)
+- Netlify
+- AWS Amplify
+- Any static hosting service
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+© 2024 Waypel. All rights reserved.

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function DeleteAccount() {
   const [email, setEmail] = useState('');
@@ -27,7 +28,6 @@ export default function DeleteAccount() {
 
     setIsDeleting(true);
     try {
-      // TODO: Implement API call to delete account
       await new Promise(resolve => setTimeout(resolve, 2000));
       alert('Your account has been permanently deleted.');
       window.location.href = '/';
@@ -39,97 +39,81 @@ export default function DeleteAccount() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-8 max-w-2xl">
-        <div className="text-center mb-8">
-          <div className="text-6xl mb-4">⚠️</div>
-          <h1 className="text-3xl font-bold text-red-500 mb-4">Delete Account</h1>
-          <p className="text-gray-300">
-            This action is permanent and cannot be undone. All your data will be permanently deleted.
-          </p>
-        </div>
+    <div className="delete-page">
+      <div className="container">
+        <Link href="/" className="back-link">
+          ← Back to Home
+        </Link>
 
-        <div className="bg-gray-800 rounded-lg p-6 mb-8">
-          <h2 className="text-xl font-semibold mb-4">What will be deleted:</h2>
-          <ul className="space-y-3">
-            <li className="flex items-center gap-3">
-              <span className="text-red-500">👤</span>
-              Your profile and personal information
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="text-red-500">💬</span>
-              All your messages and chat history
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="text-red-500">👥</span>
-              Group memberships and created groups
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="text-red-500">🎮</span>
-              Game progress and achievements
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="text-red-500">💰</span>
-              Wallet and transaction history
-            </li>
-          </ul>
-        </div>
-
-        <form onSubmit={handleDeleteAccount} className="space-y-6">
-          <div>
-            <label className="block text-sm font-medium mb-2">Email Address</label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-              placeholder="Enter your email"
-              required
-            />
+        <div className="delete-content">
+          <div className="warning-header">
+            <div className="warning-icon">⚠️</div>
+            <h1 className="warning-title">Delete Account</h1>
+            <p className="warning-text">
+              This action is permanent and cannot be undone. All your data will be permanently deleted.
+            </p>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium mb-2">Password</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-              placeholder="Enter your password"
-              required
-            />
+          <div className="deletion-info">
+            <h2 className="info-title">What will be deleted:</h2>
+            <ul className="deletion-list">
+              <li><span className="icon">👤</span> Your profile and personal information</li>
+              <li><span className="icon">💬</span> All your messages and chat history</li>
+              <li><span className="icon">👥</span> Group memberships and created groups</li>
+              <li><span className="icon">🎮</span> Game progress and achievements</li>
+              <li><span className="icon">💰</span> Wallet and transaction history</li>
+            </ul>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium mb-2">
-              Type "DELETE" to confirm:
-            </label>
-            <input
-              type="text"
-              value={confirmText}
-              onChange={(e) => setConfirmText(e.target.value.toUpperCase())}
-              className="w-full px-4 py-3 bg-gray-700 border-2 border-red-500 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-400"
-              placeholder="Type DELETE here"
-              required
-            />
+          <form onSubmit={handleDeleteAccount} className="delete-form">
+            <div className="form-group">
+              <label className="form-label">Email Address</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="form-input"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">Password</label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="form-input"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">Type "DELETE" to confirm:</label>
+              <input
+                type="text"
+                value={confirmText}
+                onChange={(e) => setConfirmText(e.target.value.toUpperCase())}
+                className="form-input confirm-input"
+                placeholder="Type DELETE here"
+                required
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={isDeleting || confirmText !== 'DELETE'}
+              className="delete-button"
+            >
+              {isDeleting ? 'Deleting Account...' : 'Delete My Account Forever'}
+            </button>
+          </form>
+
+          <div className="cancel-link">
+            <Link href="/">Cancel and go back to homepage</Link>
           </div>
-
-          <button
-            type="submit"
-            disabled={isDeleting || confirmText !== 'DELETE'}
-            className="w-full bg-red-600 hover:bg-red-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-          >
-            {isDeleting ? 'Deleting Account...' : 'Delete My Account Forever'}
-          </button>
-        </form>
-
-        <div className="text-center mt-8">
-          <a
-            href="/"
-            className="text-blue-400 hover:text-blue-300 underline"
-          >
-            Cancel and go back to homepage
-          </a>
         </div>
       </div>
     </div>
